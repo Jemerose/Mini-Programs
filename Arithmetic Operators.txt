@@ -1,0 +1,9 @@
+# Read two integers from input
+a = int(input())
+b = int(input())
+
+# Print the required outputs
+print(a + b)   # sum
+print(a - b)   # difference
+print(a * b)   # product
+   
