@@ -1,0 +1,28 @@
+from collections import Counter
+
+# Input number of shoes
+num_shoes = int(input())
+
+# Input list of shoe sizes
+shoe_sizes = list(map(int, input().split()))
+
+# Count the number of each shoe size
+inventory = Counter(shoe_sizes)
+
+# Input number of customers
+num_customers = int(input())
+
+# Variable to store total earnings
+total_earning = 0
+
+# Process each customer
+for _ in range(num_customers):
+    size, price = map(int, input().split())
+    # If the shoe is available, sell it and reduce stock
+    if inventory[size] > 0:
+        total_earning += price
+        inventory[size] -= 1
+
+# Output total earnings
+print(total_earning)
+
